@@ -7,8 +7,6 @@ metadata:
 spec:
   replicas: {{ .Values.replicaCount }}
 
-  # Для standalone Redis с одним RWO PVC безопаснее,
-  # чем одновременный запуск старого и нового Pod.
   strategy:
     type: Recreate
 
