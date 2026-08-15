@@ -14,7 +14,9 @@
 
 Был установлен runtime— containerd, CNI — Flannel. Отключен swap. Установлен br_netfilter для запуска Flannel. 
 
+![Ответ4](https://github.com/fpykt1990-stack/6-06.Kubernetes.part2/blob/main/img/img-kub-10.png)
 
+![Ответ4](https://github.com/fpykt1990-stack/6-06.Kubernetes.part2/blob/main/img/img-kub-11.png)
 
 **Задание 2**
 
