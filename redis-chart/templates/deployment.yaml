@@ -112,6 +112,10 @@ spec:
           volumeMounts:
             - name: redis-data
               mountPath: /bitnami/redis/data
+                {{- if .Values.hostPath.enabled }}
+            - name: host-volume
+              mountPath: {{ .Values.hostPath.mountPath }}
+            {{- end }}
 
       volumes:
         - name: redis-data
@@ -121,3 +125,9 @@ spec:
           {{- else }}
           emptyDir: {}
           {{- end }}
+          {{- if .Values.hostPath.enabled }}
+        - name: host-volume
+          hostPath:
+            path: {{ .Values.hostPath.path }}
+            type: {{ .Values.hostPath.type }}
+        {{- end }}
