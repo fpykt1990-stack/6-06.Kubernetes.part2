@@ -1,15 +1,15 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "redis-chart.fullname" . }}
+  name: {{ include "redis.fullname" . }}
   labels:
-    {{- include "redis-chart.labels" . | nindent 4 }}
+    {{- include "redis.labels" . | nindent 4 }}
 spec:
   type: {{ .Values.service.type }}
   ports:
-    - port: {{ .Values.service.port }}
-      targetPort: http
+    - name: redis
+      port: {{ .Values.service.port }}
+      targetPort: redis
       protocol: TCP
-      name: http
   selector:
-    {{- include "redis-chart.selectorLabels" . | nindent 4 }}
+    {{- include "redis.selectorLabels" . | nindent 4 }}
