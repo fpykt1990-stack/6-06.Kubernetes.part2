@@ -61,3 +61,5 @@ spec:
 Изучите документацию по подключению volume типа hostPath.
 Дополните деплоймент в чарте подключением этого volume.
 Запишите что-нибудь в файл на сервере, подключившись к поду с помощью kubectl exec, и проверьте правильность подключения volume.
+
+![Ответ3](https://github.com/fpykt1990-stack/6-06.Kubernetes.part2/blob/main/img/img-kub-14.png)
